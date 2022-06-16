@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geek Centre - Homepage</title>
+    <!------Flaticon------>
+    <link rel="icon" type="image/x-icon" href="/IMG/icon.ico">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/47188b661d.js" crossorigin="anonymous"></script>
+    <!--Style-->
+    <link rel="stylesheet" href="/CSS/style.css">
+    <!--Scroll Reveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    
+    <!------Header------>
+
+    <header class="header">
+        <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="/IMG/logo.png" alt="">
+                </a>
+            <ul class="nav-lists">
+                <li class="nav-list"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-list"><a href="shop.html" class="nav-link">Shop</a></li>
+                <li class="nav-list"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-list"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-list"><i class="fa-regular fa-circle-user"></i></i><a href="account.html" class="nav-link">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!------Showcase------>
+
+    <section class="showcase">
+       
+        <div class="overlay"></div>
+        <div class="text">
+          <h2>For the geeks </h2> 
+          <h3>Comics and Figures</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.</p>
+          <a href="#">Explore</a>
+        </div>
+        <div class="gojo">
+            <img src="/IMG/gojo.png" alt="">
+        </div>
+        <ul class="social">
+          <li><a href="#"><img src="/IMG/facebook.png"></a></li>
+          <li><a href="#"><img src="/IMG/twitter.png"></a></li>
+          <li><a href="#"><img src="/IMG/instagram.png"></a></li>
+        </ul>
+      </section>
+
+
+    <!------Footer------>
+
+      <div class="footer">
+          <div class="col-1">
+              <h3>USEFUL LINKS</h3>
+              <a href="#">About</a>
+              <a href="#">Services</a>
+              <a href="#">Contact</a>
+              <a href="#">Shop</a>      
+          </div>
+          <div class="col-2">
+              <h3>NEWSLETTER </h3>
+              <form>
+                  <input type="email" placeholder="Your Email" required>
+                  <br>
+                  <button type="submit">Subscribe</button>
+              </form>
+          </div>
+          <div class="col-3">
+              <h3>CONTACT</h3>
+              <p class="col-3-p">123, XXX Street, <br> Istanbul, Turkey</p>
+          </div>
+
+      </div>
+
+ 
+
+
+    <!------Scripts------>
+      <script>
+          ScrollReveal({
+              reset: false,
+              distance: '250px',
+              duration: 2500,
+              delay: 400
+
+          });
+
+          ScrollReveal().reveal('overlay, .text', {delay: 200, origin: 'bottom'})
+          ScrollReveal().reveal('.gojo', {delay: 200, origin: 'right'})
+          ScrollReveal().reveal('.social', {delay: 100, origin: 'left'})
+          ScrollReveal().reveal('.navbar', {delay: 20, origin: 'top'})
+
+
+      </script>
+
+
+     
+</body>
+</html>

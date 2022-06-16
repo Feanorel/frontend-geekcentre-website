@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Geek Centre - Account</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script>
+         function onLoadCallback(){
+               grecaptcha.render('divRecaptcha', {
+                  sitekey:'6LfTpUsgAAAAAGm4-4aF5rY0VXEDAAOY32kkIXJ2',
+                  /callbackW
+               })
+         }
+      </script>
+      <script src="https://www.google.com/recaptcha/api.js?onload=onLoadCallback&render=explicit" async defer></script>
+      <link rel="stylesheet" href="/CSS/form.css">
+      <!------Flaticon------>
+    <link rel="icon" type="image/x-icon" href="/IMG/icon.ico">
+      <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/47188b661d.js" crossorigin="anonymous"></script>
+      <!--Scroll Reveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+   </head>
+   <body>
+
+    <header class="header">
+        <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="/IMG/logo.png" alt="">
+                </a>
+            <ul class="nav-lists">
+                <li class="nav-list"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-list"><a href="shop.html" class="nav-link">Shop</a></li>
+                <li class="nav-list"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-list"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-list"><i class="fa-regular fa-circle-user"></i></i><a href="account.html" class="nav-link">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <br><br><br><br>
+    
+    
+
+    
+
+    
+    <section class="account">
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Login Form
+            </div>
+            <div class="title signup">
+               Signup Form
+            </div>
+         </div>
+         <div class="form-container">
+            <div class="slide-controls">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Login</label>
+               <label for="signup" class="slide signup">Sign up</label>
+               <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+               <form action="#" class="login">
+                  <div class="field">
+                     <input type="text" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Password" required>
+                  </div>
+                  <div class="pass-link">
+                     <a href="#">Forgot password?</a>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Login">
+                  </div>
+                  <div class="signup-link">
+                     Not a member? <a href="">Signup now</a>
+                  </div>
+               </form>
+               <form action="#" class="signup">
+                  <div class="field">
+                     <input type="text" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Password" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Confirm password" required>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Signup">
+                  </div>
+                  <div id="divRecaptcha" class="g-recaptcha" data-sitekey="6LfTpUsgAAAAAGm4-4aF5rY0VXEDAAOY32kkIXJ2"></div>
+               </form>
+            </div>
+         </div>
+      </div>
+    </section>
+
+    <!-----Scripts------>
+      <script>
+         const loginText = document.querySelector(".title-text .login");
+         const loginForm = document.querySelector("form.login");
+         const loginBtn = document.querySelector("label.login");
+         const signupBtn = document.querySelector("label.signup");
+         const signupLink = document.querySelector("form .signup-link a");
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%";
+           loginText.style.marginLeft = "-50%";
+         });
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%";
+           loginText.style.marginLeft = "0%";
+         });
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return false;
+         });
+      </script>
+
+      
+
+    <!--------Scroll Reveal-------->
+    <script>
+    ScrollReveal({
+        reset: true,
+        distance: '250px',
+        duration: 2500,
+        delay: 400
+
+    });
+
+    ScrollReveal().reveal('.account', {delay: 200, origin: 'bottom'})
+    ScrollReveal().reveal('.', {delay: 200, origin: 'right'})
+    ScrollReveal().reveal('.', {delay: 100, origin: 'left'})
+    ScrollReveal().reveal('.navbar', {delay: 20, origin: 'top'})
+
+</script>
+
+<!--------Recaptcha--------->
+
+
+   </body>
+</html>
